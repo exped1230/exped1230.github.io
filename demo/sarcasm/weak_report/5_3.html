@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="./bootstrap_css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./idx.css">
+<link rel="stylesheet" href="./index.css"> -->
+<link rel="stylesheet" href="./slide.css">
+<!-- <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script> -->
+<style>
+body {background-image:url('./background.PNG');
+      background-size: cover;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: rgba(0,0,0,0.8);
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 2%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+</style>
+</head>
+<body>
+    <div class="my_header">
+        <h1 style="color:#000000; padding-top:3rem; font-size: 28pt; font-family: Times New Roman ;">互联网隐式情感周报-2023年5月第三期</h1>
+    </div>
+
+    <hr>
+
+
+<div class="slideshow-container" style="margin-top:20px;">
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> moirawebb 2023-05-17 </div>
+  <div class="numbertext" style="font-size: 2rem">1 / 7</div>
+  <img src="./5_3/1.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">My home office sucks. </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:66.5%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 66.5</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:33.5%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 33.5</p>
+    </div>
+    </div>
+</div>
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Shubham Mishra🇮🇳⚡ 2023-05-19 </div>
+  <div class="numbertext" style="font-size: 2rem">2 / 7</div>
+  <img src="./5_3/2.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Looks like it is in Stage 5 now :) </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:81.1%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 81.1</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:18.9%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 18.9</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Toon_Dreessen 2023-05-16 </div>
+  <div class="numbertext" style="font-size: 2rem">3 / 7</div>
+  <img src="./5_3/3.jpg" style="width:700px;">
+  <div class="text_block style=" style= "font-size: 1.7rem">The key to a good t-bone is to microwave it for, what, 40 minutes?</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:63.7%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 63.7</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:36.3%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 36.3</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> A.J. Roberts 2023-05-19 </div>
+  <div class="numbertext" style="font-size: 2rem">4 / 7</div>
+  <img src="./5_3/4.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Got Scarlet Witch today!  Thanks, Amazon! @amazon #Funko #ScarletWitch</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:86.2%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 86.2</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:13.8%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 13.8</p>
+    </div>
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> ZOLTAN BARCZI 2023-05-17 </div>
+  <div class="numbertext" style="font-size: 2rem">5 / 7</div>
+  <img src="./5_3/5.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">good idea.. looks like raising interest is curbing inflation.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:96.7%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 96.7</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:3.3%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 3.3</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">5 / 8</div>
+  <img src="./5_3/6.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Parking by an #educated #ITWorker in #Office basement.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:94.6%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 94.6</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:5.4%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 5.4</p>
+    </div>
+    </div>
+</div> -->
+
+
+
+
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">6 / 8</div>
+  <img src="./5_3/7.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">@stminfo Not impressed with 6:04 driving by this stop, without stopping, past 6 customers waiting. 6:12 bus is one with airport baggage section, thus 0 space #sardines This delay leads to missed metro at CoteVertu, missed bus...late for work. Merci.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:69.6%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 69.6</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:30.4%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 30.4</p>
+    </div>
+    </div>
+</div> -->
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Manav Arora... 2023-05-19 </div>
+  <div class="numbertext" style="font-size: 2rem">6 / 7</div>
+  <img src="./5_3/8.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Thank God #limca is safe, i just can't imagine a good hajma  without limca.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:88.6%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 88.6</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:11.4%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 11.4</p>
+    </div>
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Shonna White 2023-05-21 </div>
+  <div class="numbertext" style="font-size: 2rem">7 / 7</div>
+  <img src="./5_3/9.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">The air quality in my prince right now is SPECTACULAR!</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:63.9%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 63.9</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:36.1%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 36.1</p>
+    </div>
+    </div>
+</div>
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">8 / 8</div>
+  <img src="./5_3/10.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Relatable! </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:87.9%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 87.9</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:12.1%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 12.1</p>
+    </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

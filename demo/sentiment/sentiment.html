@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>exped1230 | 视觉demo</title>
+	<link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="./bootstrap_css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./idx.css">
+	<link rel="stylesheet" href="./index.css">
+	<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+
+    <style>
+        .darken {
+            display: inline-block;
+            background: black;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .darken img {
+            display: block;
+            -webkit-transition: all 0.4s linear;
+            -moz-transition: all 0.4s linear;
+            -ms-transition: all 0.4s linear;
+            -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+        }
+
+        .darken:hover img {
+            opacity: 0.7;
+        }
+
+        body {
+            padding-top: 3rem;
+            /*padding-bottom: 3rem;*/
+            color: #5a5a5a;
+        }
+
+        img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .mt-footer {
+            margin-top: 3rem;
+        }
+
+        #overlay {
+            background: #ffffff;
+            color: #666666;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            top: 0;
+            left: 0;
+            opacity: .80;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="margin-top: -3rem; margin-bottom: 0;">
+		<div class="container">
+			<a class="navbar-brand" href="../demo.html">Demo库</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="https://exped1230.github.io/">个人主页</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+	</nav>
+</header>
+
+<main>
+
+    <div class="container-fluid shadow-sm">
+        <div class="container h-100">
+            <h1 style="color:#000000; padding-top:3rem;">图像情感分析</h1>
+        </div>
+		
+		<!-- <div class="container h-100">
+		    <h3 style="color:#000000; padding-top:3rem;">
+				图文反讽检测旨在判断输入的一组图像文本对是否在用阴阳怪气的方法表现反讽意图。
+				反讽是一种修辞手法，常用于讽刺、嘲笑或表达与字面意思相反的含义。
+				在图文反讽检测任务中，模型需要理解图文的语义、对立性、上下文，判断其是否传递了反讽含义。
+			</h3>
+		</div> -->
+    </div>
+
+
+    <div class="container" style="margin-top: 26px;">
+
+        <ul class="nav nav-list"><li class="divider"></li></ul>
+
+        <h3>请选择一张图片，或上传一张本地图片：</h3>
+
+        <div class="container">
+            <div class="d-flex flex-wrap" style="margin-top: 20px;">
+                <div class="p-2" style="width: 220px;">
+                    <div class="darken mt-1">
+                        <img src="./global/example01.png" style="display:inline-block; width: 200px; height: 13rem;" onclick="exampleImage('example01')">
+                    </div>
+                </div>
+                <div class="p-2" style="width: 220px;">
+                    <div class="darken mt-1">
+                        <img src="./global/example02.png" style="display:inline-block; width: 200px; height: 13rem;" onclick="exampleImage('example02')">
+					</div>
+                </div>
+                <div class="p-2" style="width: 220px;">
+                    <div class="darken mt-1">
+                        <img src="./global/example03.png" style="display:inline-block; width: 200px; height: 13rem;" onclick="exampleImage('example03')">
+					</div>
+                </div>
+                <div class="p-2" style="width: 220px;">
+                    <div class="darken mt-1">
+                        <img src="./global/example04.png" style="display:inline-block; width: 200px; height: 13rem;" onclick="exampleImage('example04')">
+					</div>
+                </div>
+                <div class="p-2" style="width: 220px;">
+                    <div class="darken mt-1">
+                        <img src="./global/example05.png" style="display:inline-block; width: 200px; height: 13rem;" onclick="exampleImage('example05')">
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 24px; margin-left: 8px; margin-bottom: 56px;">
+
+            <div>
+                <input type="file" id="btn_file" style="display:none" onchange="imgChange(this)" accept="image/png,image/gif,image/jpeg">
+                <button type="button" class="btn btn-dark btn-lg" onclick="F_Open_dialog()">选择图片</button>
+            </div>
+
+        </div>
+
+        <hr/>
+
+        <h3 style="margin-top: 24px; margin-bottom: 24px;">结果</h3>
+
+        <div id="overlay">
+            <div class="w-100 d-flex justify-content-center align-items-center">
+                <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" style="max-width: 700px; margin-bottom: 36px;">
+                    <img id="input_image" class="shadow" style="min-height: 400px;" src="./global/example04.png" />
+                </div>
+				
+				<div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+					<div id="pos_val_bar" style="background:#DDDDDD; width:96.8%;">
+						<p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Positive: 96.8</p>
+					</div>
+					<div id="neg_val_bar" style="background:#DDDDDD; width:3.2%;">
+							<p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Negative: 3.2</p>
+					</div>
+					<hr/>
+					<canvas id="myChart" width="360" height="200"></canvas>
+				<!-- <div id="result"></div> -->
+				</div>
+			</div>
+
+        </div>
+
+
+
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+			<div class="row">
+				<div class="col" style="margin-bottom: 36px;">
+					<h3  style="margin-bottom: 15px;">联系我们：</h3>
+					<ul class="list-unstyled">
+						<li style="font-size: 20px;margin-bottom: 15px;">贾国力 exped1230@gmail.com</li>
+						<li style="font-size: 20px;margin-bottom: 15px;">文长崧 downdric@163.com</li>
+						<li style="font-size: 20px;margin-bottom: 15px;">张知诚 gloryzzc6@sina.com</li>
+					</ul>
+				</div>
+				<div class="col" style="margin-bottom: 36px;">
+					<h3  style="margin-bottom: 25px;">微信交流群：</h3>
+					<img id="input_image" class="shadow" style="width: 150px;" src="./global/code.png" />
+				</div>
+			</div>
+            <p><class="d-block mb-3 text-muted">&copy; All rights reserved</p>
+        </div>
+    </footer>
+
+
+</main>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+
+<script type="text/javascript">
+    function F_Open_dialog()
+    {
+        document.getElementById("btn_file").click();
+    }
+
+    function round(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    function sendFromData(fd, img_file) {
+        $.ajax({
+            type:'POST',
+            url: "https://exped1230.cpolar.top/sentiment_upload",
+            data: fd,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(res){
+                document.getElementById("overlay").style.display = "none";
+                console.log(res)
+				var fr = new FileReader();
+				fr.readAsDataURL(img_file);
+				fr.onloadend = function(){
+					document.getElementById("input_image").src = fr.result;
+				}
+                emotions = res["emotion"];
+                sentiments = res["sentiment"];
+                let positive = round(parseFloat(sentiments[0])*100, 1)
+                let negative = round(parseFloat(sentiments[1])*100, 1)
+                let pos_val = document.getElementById("pos_val");
+                let neg_val = document.getElementById("neg_val");
+                pos_val.innerHTML = "&#128512; Positive: "+positive+"%"
+                neg_val.innerHTML = "&#128533; Negative: "+negative+"%"
+                pos_val_bar.style["width"] = positive+"%";
+                neg_val_bar.style["width"] = negative+"%";
+                
+                let data = emotions.map(parseFloat);
+                plot_chart(data)
+            },
+            error: function(data){
+                document.getElementById("overlay").style.display = "none";
+                alert("Sorry, something went wrong.");
+            }
+        });
+    }
+
+    function imgChange(self) {
+        if (self.files.length < 1) {
+            return;
+        }
+        document.getElementById("overlay").style.display = "flex";
+        var img_file = self.files[0];
+        var formData = new FormData();
+        formData.append("img", img_file);
+        sendFromData(formData, img_file);
+    }
+
+
+    function exampleImage(name) {
+        document.getElementById("overlay").style.display = "flex";
+        var formData = new FormData();
+		formData.append('img_path', "./sentiment/examples/"+name+".png")
+		$.ajax({
+		    type:'POST',
+		    // url: "http://47.111.31.20:8083/emotion_example_img",
+			url: "https://exped1230.cpolar.top/sentiment_example",
+		    data: formData,
+		    cache:false,
+		    contentType: false,
+		    processData: false,
+		    success:function(res){
+		        document.getElementById("overlay").style.display = "none";
+		        console.log(res)
+		        document.getElementById("input_image").src = "./global/" + name + ".png";
+				emotions = res["emotion"]
+				sentiments = res["sentiment"]
+				let positive = round(parseFloat(sentiments[0])*100, 1)
+				let negative = round(parseFloat(sentiments[1])*100, 1)
+				let pos_val = document.getElementById("pos_val");
+				let neg_val = document.getElementById("neg_val");
+				pos_val.innerHTML = "&#128512; Positive: "+positive+"%"
+				neg_val.innerHTML = "&#128533; Negative: "+negative+"%"
+				pos_val_bar.style["width"] = positive+"%";
+				neg_val_bar.style["width"] = negative+"%";
+				
+				let data = emotions.map(parseFloat);
+				plot_chart(data)
+		    },
+		    error: function(data){
+		        document.getElementById("overlay").style.display = "none";
+		        alert("Sorry, something went wrong.");
+		    }
+		});
+		
+    }
+	
+	function plot_chart(data) {
+		myChart.data.datasets[0].data = data;
+		myChart.update();
+	}
+
+</script>
+
+<script src="./chart/dist/Chart.bundle.js"></script>
+
+<script>
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Amusement', 'Contentment', 'Awe', 'Excitement', 'Fear', 'Sadness', 'Disgust', 'Anger'],
+            datasets: [{
+                label: 'Emotion confidence',
+                data: [1,2,3,4,5,6,7,8],
+                backgroundColor: [
+                    'rgba(33, 192, 255, 1)',
+                    'rgba(33, 162, 235, 1)',
+                    'rgba(22, 172, 205, 1)',
+                    'rgba(176, 164, 227, 1)',
+                    'rgba(255, 164, 0, 1)',
+                    'rgba(255, 241, 67, 1)',
+                    'rgba(255, 71, 119, 1)',
+                    'rgba(113, 162, 66, 1)',
+                ],
+                borderColor: [
+                    'rgba(33, 156, 188, 1)',
+                    'rgba(33, 162, 235, 1)',
+                    'rgba(22, 172, 205, 1)',
+                    'rgba(176, 164, 227, 1)',
+                    'rgba(255, 164, 0, 1)',
+                    'rgba(255, 241, 67, 1)',
+                    'rgba(255, 71, 119, 1)',
+                    'rgba(113, 162, 66, 1)',
+                ],
+                borderWidth: 1
+            }],
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+			"animation": {
+			    "duration": 0,
+			    "onComplete": function() {
+					var chartInstance = this.chart,
+					ctx = chartInstance.ctx;
+			
+					ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+					ctx.textAlign = 'center';
+					ctx.textBaseline = 'bottom';
+			
+					this.data.datasets.forEach(function(dataset, i) {
+						var meta = chartInstance.controller.getDatasetMeta(i);
+						meta.data.forEach(function(bar, index) {
+							var data = dataset.data[index];
+							ctx.fillText(data, bar._model.x, bar._model.y - 5);
+						});
+					});
+			    }
+			}
+        }
+		/*onAnimationComplete: function () {
+		    var ctx = this.chart.ctx;
+		    ctx.font = this.scale.font;_model
+		    ctx.fillStyle = this.scale.textColor
+		    ctx.textAlign = "center";
+		    ctx.textBaseline = "bottom";
+		    this.datasets.forEach(function (dataset) {
+		        dataset.bars.forEach(function (bar) {
+		            ctx.fillText(bar.value, bar.x, bar.y - 5);
+		        });
+		    })
+		}*/
+    });
+	
+    
+</script>
+
+
+
+</body>
+</html>
