@@ -8,10 +8,12 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
        
     <!-- title -->
-    <title>Weak report</title>
+    <title>Week report</title>
                 
     <!-- add css -->
     <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+	  <link href="../bootstrap_css/bootstrap.min.css" rel="stylesheet">
 	
     
     
@@ -28,6 +30,8 @@
         margin: 0;
         padding: 0;
 		overflow:auto !important;
+    background-image:url('./background.PNG');
+    background-size: cover;
     }
     </style> 
       
@@ -75,7 +79,6 @@
       
         <!-- BEGIN CONTAINER BOOK -->
         <div id="fb7-container-book">
-     
            <!-- BEGIN deep linking -->  
            <section id="fb7-deeplinking">
              <ul>
@@ -96,16 +99,24 @@
             
            <!-- BEGIN ABOUT -->
            <section id="fb7-about">
-                   <!-- <h1>Why choose <strong>FlipBook?</strong></h1>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus ipsum,sit amet fermentum eros. Aliquam eget nulla neque, dignissim consectetur velit.Sed non metus sapien, nec laoreet ipsum.</p>
-                   <h1>What is <strong>this</strong>?</h1>
-                   <p>Ipsum <a href="javascript:youtube('48I0IHmsuOE','560','315')">Youtube</a> sit amet, consectetur adipiscing elit. Praesent eu tellus ipsum, sit amet fermentum eros. Aliquam eget nulla neque, dignissim consectetur velit. Sed non metus sapien, nec laoreet ipsum.</p>
-                   <h1>Best <strong>features</strong></h1>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus ipsum, sit amet fermentum eros. Aliquam eget nulla neque, dignissim consectetur velit. Sed non metus sapien, nec laoreet ipsum.</p>
+            <p style="font-size:22px;">
+              <a href="../sarcasm.html">
+              <img  border="5" src="return.jpg"  width="18" height="18"></a></p>
+                   <h1 style="color: rgb(12, 100, 171);"><strong>Catalogue</strong></h1>
+                   <li style="margin-top: -6pt;"><a href="javascript:setPage(2)" style="color: rgb(10, 127, 222); font-size: 15pt;">1. Look the details and care of my precious...</a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(2)" style="color: rgb(10, 127, 222); font-size: 15pt;">2. I appreciate the tourism board's efforts in bringing... </a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(4)" style="color: rgb(10, 127, 222); font-size: 15pt;">3. Yup. We are the greatest country in the world... </a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(4)" style="color: rgb(10, 127, 222); font-size: 15pt;">4. No worries. More 'gun free zone' signs are on the way...</a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(6)" style="color: rgb(10, 127, 222); font-size: 15pt;">5. Well, but he's a great and successful businessman... </a></li>                   
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(6)" style="color: rgb(10, 127, 222); font-size: 15pt;">6. And now that I've finally got mine, the ability to play...   </a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(8)" style="color: rgb(10, 127, 222); font-size: 15pt;">7. Memo to @GovKathyHochul @NYCMayor...</a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(8)" style="color: rgb(10, 127, 222); font-size: 15pt;">8. Nothing says affordability like private...</a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(10)" style="color: rgb(10, 127, 222); font-size: 15pt;">9. Trump Excited After Finding Crumpled-Up Top...</a></li>
+                   <li style="margin-top: 6pt;"><a href="javascript:setPage(10)" style="color: rgb(10, 127, 222); font-size: 15pt;">10. Historic Preservationists Place Eiffel Tower...</a></li>
                    <p>&nbsp;</p>
                    <p>&nbsp;</p>
                    <p>&nbsp;</p>
-                   <p>&nbsp;</p> -->
+                   <p>&nbsp;</p>
            </section>
            <!-- END ABOUT -->
     
@@ -133,43 +144,63 @@
                     <!-- END PAGE 0 -->
                       
                     
-                    
                     <!-- BEGIN PAGE 1 -->         
-                    <div style="background-image:url(background.PNG)" >
+                    <div style="background-image:url(background.PNG);" >
                            
-                         <!-- begin container page book -->
-                         <div class="fb7-cont-page-book">
-                          <p style="text-align: center; margin-top: 30pt;">
-                            <img src="weak_report/9_1/4.JPG" style="height:76%;">
-                            <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 300px; margin-bottom: 36px;">
-                              <div id="pos_val_bar" style="background:#DDDDDD; width:78%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 78</p>
+                      <!-- begin container page book -->
+                      <div class="fb7-cont-page-book">
+                         <img src="weak_report/9_1/4.JPG" style="height:76%;  margin-left: 10%; margin-top: 6%;">
+
+                        <hr>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col" style="margin-top: 0%; margin-left: 5%; width: 1%; margin-bottom: 36px;">
+                              <div id="neg_val_bar" style="background:#DDDDDD; width:19%;">
+                                  <p id="neg_val" class="pl-5" style="font-size:25px;white-space:nowrap;">&#128533; Sarcastic: 78</p>
                               </div>
-                              <div id="neg_val_bar" style="background:#DDDDDD; width:22%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 22</p>
+                              <div id="pos_val_bar" style="background:#DDDDDD; width:5.2%;">
+                                      <p id="pos_val" class="pl-5" style="font-size:25px;white-space:nowrap;">&#128512; Non-Sarcastic: 22</p>
                               </div>
-                              </div>
-                            </p>
-                             <!-- description for page  --> 
-                            <div class="fb7-page-book">
- 
-                            
-                            </div>                     
-                                  
-                                      
-                            <!-- begin number page -->                
-                            <div class="fb7-meta">                        
-                                    <span class="fb7-num">1</span>                         
                             </div>
-                            <!-- end number page --> 
-                             
                             
-                            
+                            <div class="col" style="margin-top: -1%; margin-left: -42%; width: 20%; margin-bottom: 36px;">
+                              <img src="sentiment.JPG " width="200" height="100">
+                            </div>
                           </div>
-                          <!-- end container page book -->
-                            
-                    </div>
-                     <!-- END PAGE 1 -->
+                        </div>
+                          <!-- description for page  --> 
+                         <div class="fb7-page-book">
+
+                         
+                         </div>                     
+                               
+                                   
+                         <!-- begin number page -->                
+                         <div class="fb7-meta">                        
+                                 <span class="fb7-num">1</span>                         
+                         </div>
+                         <!-- end number page --> 
+                          
+                         
+                         
+                       </div>
+                       <!-- end container page book -->
+                         
+                 </div>
+                  <!-- END PAGE 1 -->
+
+                          <!-- <div class="col" style="width: 45%; margin-bottom: 36px;">
+                            <button type="button;">上传图文对</button>
+                          </div>
+                          
+                          <div class="col" style="width: 45%; margin-bottom: 36px;">
+                            <div id="pos_val_bar" style="background:#DDDDDD; width:78%;">
+                                <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 78</p>
+                            </div>
+                              <div id="neg_val_bar" style="background:#DDDDDD; width:22%;">
+                                    <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 22</p>
+                              </div>
+                          </div> -->
                       
                     
                     <!-- BEGIN PAGE 2 -->          
@@ -177,17 +208,24 @@
                            
                          <!-- begin container page book -->
                          <div class="fb7-cont-page-book">
-                          <p style="text-align: center; margin-top: 30pt;">
-                          <img src="weak_report/9_1/9.JPG" style="height:76%;">
-                          <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360pt; margin-bottom: 36px;">
-                            <div id="pos_val_bar" style="background:#DDDDDD; width:89.3%;">
-                                <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 99.2</p>
+                          <img src="weak_report/9_1/9.JPG" style="height:76%; margin-left: 18%; margin-top: 6%;">
+                          <hr>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col" style="margin-top: 0%; margin-left: 5%; width: 1%; margin-bottom: 36px;">
+                                <div id="neg_val_bar" style="background:#DDDDDD; width:24.5%;">
+                                    <p id="neg_val" class="pl-5" style="font-size:25px;white-space:nowrap;">&#128533; Sarcastic: 99.2</p>
+                                </div>
+                                <div id="pos_val_bar" style="background:#DDDDDD; width:0.5%;">
+                                        <p id="pos_val" class="pl-5" style="font-size:25px;white-space:nowrap;">&#128512; Non-Sarcastic: 0.8</p>
+                                </div>
+                              </div>
+                              
+                              <div class="col" style="margin-top: -1%; margin-left: -40%; width: 20%; margin-bottom: 36px;">
+                                <img src="sentiment.JPG " width="200" height="100">
+                              </div>
                             </div>
-                            <div id="neg_val_bar" style="background:#DDDDDD; width:0.63%;">
-                                    <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 0.8</p>
-                            </div>
-                            </div>
-                          </p>
+                          </div>
                                 <!-- description for page--> 
                                 <div class="fb7-page-book">
                                                  
@@ -219,10 +257,10 @@
                             <img src="weak_report/9_1/5.JPG" style="height:76%;">
                             <div class="col" style="margin-left: 8%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:87.7%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 97.5</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 97.5</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:2.25%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 2.5</p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 2.5</p>
                               </div>
                               </div>
                             </p>
@@ -253,10 +291,10 @@
                             <img src="weak_report/9_1/3.JPG" style="height:76%;">
                             <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:89.2%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 99.1</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 99.1</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:0.81%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 0.9 </p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 0.9 </p>
                               </div>
                               </div>
                             </p>
@@ -288,10 +326,10 @@
                             <img src="weak_report/9_1/1.JPG" style="height:76%;">
                             <div class="col" style="margin-left: 6%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:89.2%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 99.1</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 99.1</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:0.81%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 0.9</p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 0.9</p>
                               </div>
                               </div>
                             </p>
@@ -325,10 +363,10 @@
                             <img src="weak_report/9_1/2.JPG" style="height:76%;">
                             <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:96.5%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 96.5</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 96.5</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:3.5%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 3.5</p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 3.5</p>
                               </div>
                               </div>
                             </p>
@@ -365,10 +403,10 @@
                             <img src="weak_report/9_1/6.JPG" style="height:76%;">
                             <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:86.4%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 96.6</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 96.6</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:3%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 3.4</p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 3.4</p>
                               </div>
                               </div>
                             </p>
@@ -403,13 +441,13 @@
                          <!-- begin container page book --> 
                          <div class="fb7-cont-page-book">
                           <p style="text-align: center; margin-top: 30pt;">
-                            <img src="weak_report/9_1/10.JPG" style="height:76%;">
+                            <img src="weak_report/9_1/10.jpg" style="height:76%;">
                             <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                               <div id="pos_val_bar" style="background:#DDDDDD; width:95%;">
-                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 95</p>
+                                  <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 95</p>
                               </div>
                               <div id="neg_val_bar" style="background:#DDDDDD; width:5%;">
-                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 5</p>
+                                      <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 5</p>
                               </div>
                               </div>
                             </p>
@@ -447,10 +485,10 @@
                          <img src="weak_report/9_1/7.JPG" style="height:76%;">
                          <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                            <div id="pos_val_bar" style="background:#DDDDDD; width:74.9%;">
-                               <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 74.9</p>
+                               <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 74.9</p>
                            </div>
                            <div id="neg_val_bar" style="background:#DDDDDD; width:25.1%;">
-                                   <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 25.1</p>
+                                   <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 25.1</p>
                            </div>
                            </div>
                          </p>
@@ -488,10 +526,10 @@
                          <img src="weak_report/9_1/8.JPG" style="height:76%;">
                          <div class="col" style="margin-left: 12%; margin-top: 2%; min-width: 360px; margin-bottom: 36px;">
                            <div id="pos_val_bar" style="background:#DDDDDD; width:80.2%;">
-                               <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 80.2</p>
+                               <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Sarcastic: 80.2</p>
                            </div>
                            <div id="neg_val_bar" style="background:#DDDDDD; width:19.8%;">
-                                   <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 19.8</p>
+                                   <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Non-Sarcastic: 19.8</p>
                            </div>
                            </div>
                          </p>
@@ -575,49 +613,49 @@
                     <li></li>
                             
                     <!-- icon download -->
-                    <li>
-                        <a title="Pdf File Or Zip" class="fb7-download" href="#"></a>
-                    </li>
+                    <!-- <li>
+                        <a title="Pdf File Or Zip" class="fb7-download" href="#">Pdf File Or Zip</a>
+                    </li> -->
                                             
                     
                     <!-- icon_zoom_in -->                         
                     <li>
-                        <a title="Zoom In" class="fb7-zoom-in"></a>
+                        <a title="Zoom In" class="fb7-zoom-in"><img  border="5" src="zoom_in.JPG"  width="32" height="32"></a>
                     </li>
                                     
                     
                     <!-- icon_zoom_out -->                 
                     <li>
-                        <a title="Zoom Out" class="fb7-zoom-out"></a>
+                        <a title="Zoom Out" class="fb7-zoom-out"><img  border="5" src="zoom_out.JPG"  width="32" height="32"></a>
                     </li>
                                     
                     
                     <!-- icon_zoom_auto -->
-                    <li>
-                        <a title="Zoom Auto" class="fb7-zoom-auto"></a>
-                    </li>
+                    <!-- <li>
+                        <a title="Zoom Auto" class="fb7-zoom-auto">Zoom Auto</a>
+                    </li> -->
                                     
                     
                     <!-- icon_zoom_original -->
-                    <li>
-                        <a title="Zoom Original (Scale 1:1)" class="fb7-zoom-original"></a>
-                    </li>
+                    <!-- <li>
+                        <a title="Zoom Original (Scale 1:1)" class="fb7-zoom-original">Original</a>
+                    </li> -->
                                      
                     
                     <!-- icon_allpages -->
                     <li>
-                        <a title="Show All Pages " class="fb7-show-all"></a>
+                        <a title="Show All Pages " class="fb7-show-all"><img  border="5" src="show_all.JPG"  width="32" height="32"></a>
                     </li>
                                                     
                     
                     <!-- icon_home -->
                     <li>
-                        <a title="Show Home Page" class="fb7-home"></a>
+                        <a title="Show First Page" class="fb7-home"><img  border="5" src="show_home.JPG"  width="32" height="32"></a>
                     </li>
                                     
                     <!-- icon fullscreen -->                 
                     <li>
-                        <a title="Full / Normal Screen" class="fb7-fullscreen"></a>
+                        <a title="Full Screen" class="fb7-fullscreen"><img  border="5" src="full_screen.JPG"  width="32" height="32"></a>
                     </li>
                             
                     <!-- margin right -->                 
@@ -649,49 +687,55 @@
                 <ul id="fb7-slider">
                 
                          <!-- PAGE 1 - THUMB -->
-                         <li class="1">
-                           <img alt="" src="images/1_.jpg">
+                         <li class="2">
+                           <img alt="" src="weak_report/9_1/914.jpg">
                          </li>
                          
                          <!-- PAGE 2 - THUMB -->
-                         <li class="2">
-                           <img alt="" src="images/2_.jpg">
+                         <li class="3">
+                           <img alt="" src="weak_report/9_1/919.jpg">
                          </li>
                          
                          <!-- PAGE 3 - THUMB -->
-                         <li class="3">
-                           <img alt="" src="images/3_.jpg">
+                         <li class="4">
+                           <img alt="" src="weak_report/9_1/915.jpg">
                          </li>
                          
                          <!-- PAGE 4-5 - THUMB -->
                          <li class="5">
-                           <img alt="" src="images/4_5_.jpg">
+                           <img alt="" src="weak_report/9_1/913.jpg">
                          </li>
                          
                          <!-- PAGE 6 - THUMB -->
                          <li class="6">
-                           <img alt="" src="images/6_.jpg">
+                           <img alt="" src="weak_report/9_1/911.jpg">
                          </li>
                          
                          <!-- PAGE 7 - THUMB -->
                          <li class="7">
-                           <img alt="" src="images/7_.jpg">
+                           <img alt="" src="weak_report/9_1/912.jpg">
                          </li>
                          
                          <!-- PAGE 8 - THUMB -->
                          <li class="8">
-                           <img alt="" src="images/8_.jpg">
+                           <img alt="" src="weak_report/9_1/916.jpg">
                          </li>
                          
                          <!-- PAGE 9 - THUMB -->
                          <li class="9">
-                           <img alt="" src="images/9_.jpg">
+                           <img alt="" src="weak_report/9_1/9110.jpg">
                          </li>
                          
                          <!-- PAGE 10S - THUMB -->
                          <li class="10">
-                           <img alt="" src="images/end_.jpg">
+                           <img alt="" src="weak_report/9_1/917.jpg">
                          </li>
+                         <li class="11">
+                          <img alt="" src="weak_report/9_1/918.JPG">
+                        </li>
+                        <li class="12">
+                          <img alt="" src="last_page.png">
+                        </li>
           
                 </ul>
             
@@ -717,9 +761,9 @@ jQuery('#fb7-ajax').data('config',
 		"page_width":"640",
 		"page_height":"920",
 		"go_to_page":"Page",
-		"gotopage_width":"45",
+		"gotopage_width":"50",
 		"zoom_double_click":"1",
-		"zoom_step":"0.06",
+		"zoom_step":"0.08",
 		"tooltip_visible":"true",
 		"toolbar_visible":"true",
 		"deeplinking_enabled":"true",

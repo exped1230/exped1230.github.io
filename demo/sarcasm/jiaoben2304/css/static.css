@@ -41,11 +41,9 @@
 #fb7 .fb7-menu li a {
 	display: block;
 	background:inherit;
-	width: 38px;
+	width: 200px;
 	height: 65px;
-	margin:-37px 0px;
-	
-	
+	margin:-30pt 130px;
 }
 
 #fb7 .fb7-menu li a.fb7-download				{ background-position: 0 -65px; }
