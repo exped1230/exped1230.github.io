@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-plt.rcParams["font.sans-serif"]=["Kaiti"] #设置字体
+plt.rcParams["font.sans-serif"]=["Times New Roman"] #设置字体
 plt.rcParams["axes.unicode_minus"]=False
 def img_rotate(src, angel):
     h,w = src.shape[:2]
@@ -18,14 +18,14 @@ fig, ax = plt.subplots(figsize=(6,9), dpi=100)
 # plt.figure(figsize=(6,8))
 N = 2
 ind = [0,0.6] 
-plt.xticks(ind, ('图像\n情感', '文本\n情感'),fontsize=70,rotation=90)
+plt.xticks(ind, ('Image', 'Text'),fontsize=70,rotation=90)
 
 # plt.ylabel('Scores')
-plt.yticks([0.37,0.85], ('消极',"积极"),fontsize=70,rotation=90)
+plt.yticks([0.35,0.82], ("Neg","Pos"),fontsize=70,rotation=90)
 #          图  文
-Bottom = (0.5,0.1)
-Center = (0.5,0.9)
-
+Bottom = (0.734,0.3)
+Center = (0.265,0.7)
+path = r"C:\Users\downd\Desktop\sarcasm(3)\jiaoben2304\weak_report\9_1\10_senti.png"
 
 d = []
 for i in range(0, len(Bottom)):
@@ -51,7 +51,7 @@ ax.spines['left'].set_visible(False)
 # plt.legend((p1[0], p2[0]), ('Bottom', 'Center'),loc = 3)
 plt.subplots_adjust(left=0.25,right=0.99,top=0.99,bottom=0.3)
 
-path = r"C:\Users\92056\Desktop\sarcasm\jiaoben2304\weak_report\9_1\1_senti.png"
+
 plt.savefig(path)
 img = cv2.imread(path)
 img = img_rotate(img,-90)
