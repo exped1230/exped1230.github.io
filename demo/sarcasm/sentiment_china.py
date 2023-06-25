@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-plt.rcParams["font.sans-serif"]=["Times New Roman"] #设置字体
+plt.rcParams["font.sans-serif"]=["Kaiti"] #设置字体
 plt.rcParams["axes.unicode_minus"]=False
 def img_rotate(src, angel):
     h,w = src.shape[:2]
@@ -20,12 +20,12 @@ N = 2
 ind = [0,0.6] 
 # plt.xticks(ind, ('Image', 'Text'),fontsize=70,rotation=90)
 # plt.yticks([0.35,0.82], ("Neg","Pos"),fontsize=70,rotation=90)
-plt.xticks(ind, ('Image', 'Text'),fontsize=70,rotation=90)
-plt.yticks([0.35,0.82], ("Neg","Pos"),fontsize=70,rotation=90)
+plt.xticks(ind, ('图像', '文本'),fontsize=70,rotation=90)
+plt.yticks([0.4,0.85], ("消极","积极"),fontsize=70,rotation=90)
 #          图  文
-Bottom = (0.847,0.7)
-Center = (0.153,0.3)
-path = r"C:\Users\downd\Desktop\sarcasm624\jiaoben2304\weak_report\9_1\1_senti.png"
+Bottom = (0.399,0.6)
+Center = (0.600,0.4)
+path = r"C:\Users\downd\Desktop\sarcasm624\jiaoben2304\chinese report\9_2\10_senti.png"
 
 d = []
 for i in range(0, len(Bottom)):
