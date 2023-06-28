@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="./bootstrap_css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./idx.css">
+<link rel="stylesheet" href="./index.css"> -->
+<link rel="stylesheet" href="./slide.css">
+<!-- <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script> -->
+<style>
+body {background-image:url('./background.PNG');
+      background-size: cover;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: rgba(0,0,0,0.8);
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 2%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+</style>
+</head>
+<body>
+    <div class="my_header">
+        <h1 style="color:#000000; padding-top:3rem; font-size: 28pt; font-family: Times New Roman ;">互联网隐式情感周报-2023年5月第二期</h1>
+    </div>
+
+    <hr>
+
+
+<div class="slideshow-container" style="margin-top:20px;">
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Nitro📷🏍️  2023-05-08 </div>
+  <div class="numbertext" style="font-size: 2rem">1 / 7</div>
+  <img src="./5_2/1.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Story of life.. </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:75.4%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 75.4</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:24.6%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 24.6</p>
+    </div>
+    </div>
+</div>
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Contrarian 2023-05-11 </div>
+  <div class="numbertext" style="font-size: 2rem">2 / 7</div>
+  <img src="./5_2/2.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Looks like the US housing market is really taking off... in the wrong direction. Time to start building bunkers #ContrarianTribe #HousingMarket.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:97.1%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 97.1</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:2.9%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 2.9</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">3 / 7</div>
+  <img src="./5_2/3.jpg" style="width:700px;">
+  <div class="text_block style=" style= "font-size: 1.7rem">Maybe they are happier because they all are assured they will go to Jannat. </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:63.7%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 63.7</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:36.3%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 36.3</p>
+    </div>
+    </div>
+</div> -->
+
+
+
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Chuck D 2023-05-14 </div>
+  <div class="numbertext" style="font-size: 2rem">3 / 7</div>
+  <img src="./5_2/4.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">@SFGreat_America love the $6 pop that vends warm. And when you ask the supervise at the closest stand for an exchange or a cup of ice she says “we don’t do that” then hands you one tiny cup for two pops. Thanks.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:63.4%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 63.4</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:36.6%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 36.6</p>
+    </div>
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Proudly Ultra MAGA 2023-05-13 </div>
+  <div class="numbertext" style="font-size: 2rem">4 / 7</div>
+  <img src="./5_2/5.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Uh.....that's not creepy at all.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:91.7%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 91.7</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:8.3%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 8.3</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Ho Lee Sheet 2023-05-13 </div>
+  <div class="numbertext" style="font-size: 2rem">5 / 7</div>
+  <img src="./5_2/6.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">How refreshing to see ChatGPT selectively respect religions! It's great when they won't joke about Mohammad or Allah, but have no qualms about cracking jokes on Hindu deities. Let's keep up this balanced and fair approach to humor.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:94.3%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 94.3</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:5.7%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 5.7</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Jason H (AU) 2023-05-08 </div>
+  <div class="numbertext" style="font-size: 2rem">6 / 7</div>
+  <img src="./5_2/7.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Well, Iowa did #Iowa things again today so here's a pretty sunset pic from the phone which I'm sure you'll all agree is better than any tornado shot we could have hoped for. </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:73.3%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 73.3</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:26.7%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 26.7</p>
+    </div>
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="text_author" style="font-size: 1.5rem"> Onion news 2023-05-08 </div>
+  <div class="numbertext" style="font-size: 2rem">7 / 7</div>
+  <img src="./5_2/8.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">Small Town's Economy Wholly Dependent On Cars That Made Wrong Turn After Getting Off Interstate.</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:57.7%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 57.7</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:42.3%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 42.3</p>
+    </div>
+    </div>
+</div>
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">7 / 7</div>
+  <img src="./5_2/9.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">I presume it still applies when one is doing (nay \"selling\") charity? How much money does it end up making or losing oneself?</div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:63.9%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 63.9</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:36.1%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 36.1</p>
+    </div>
+    </div>
+</div> -->
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext" style="font-size: 2rem">8 / 8</div>
+  <img src="./5_2/10.jpg" style="width:700px;">
+  <div class="text_block style=" style="font-size: 1.7rem">ofc... the law is wrong.... 12kmh over speedlimit  when we should be fined....  not in school zone....the life savers position they cameras very well.....  </div>
+  <div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+    <div id="pos_val_bar" style="background:#DDDDDD; width:87.9%;">
+        <p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 87.9</p>
+    </div>
+    <div id="neg_val_bar" style="background:#DDDDDD; width:12.1%;">
+            <p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 12.1</p>
+    </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

@@ -1402,8 +1402,8 @@ var Navigation_v7 = {
 		//download		 
 		$('.fb7-download').on('click', function(event) {     	 		  		 
 		 
-		  //$.address.update();
-		 // event.preventDefault();
+		//   $.address.update();
+		//  event.preventDefault();
 		  
 		}); 
 

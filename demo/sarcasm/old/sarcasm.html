@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>exped1230 | 视觉demo</title>
+	<link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="./bootstrap_css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./idx.css">
+	<link rel="stylesheet" href="./index.css">
+	<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script>
+<link rel="stylesheet" href="./slide.css">
+    <style>
+        .darken {
+            display: inline-block;
+            background: black;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .darken img {
+            display: block;
+            -webkit-transition: all 0.4s linear;
+            -moz-transition: all 0.4s linear;
+            -ms-transition: all 0.4s linear;
+            -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+        }
+
+        .darken:hover img {
+            opacity: 0.7;
+        }
+
+        body {
+            padding-top: 3rem;
+            /*padding-bottom: 3rem;*/
+            color: #5a5a5a;
+        }
+
+        img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .mt-footer {
+            margin-top: 3rem;
+        }
+
+        #overlay {
+            background: #ffffff;
+            color: #666666;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            top: 0;
+            left: 0;
+            opacity: .80;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="margin-top: -3rem; margin-bottom: 0;">
+		<div class="container">
+			<a class="navbar-brand" href="../demo.html">Demo库</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="https://exped1230.github.io/">个人主页</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+	</nav>
+</header>
+
+<main>
+
+    <div class="container-fluid shadow-sm">
+        <div class="container h-100">
+            <h1 style="color:#000000; padding-top:3rem;">图文反讽检测</h1>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 26px;">
+
+        <ul class="nav nav-list"><li class="divider"></li></ul>
+
+        <h3>请选择一组样例，或上传一组本地的图文对。</h3>
+
+        <div class="container">
+            <div class="d-flex flex-wrap" style="margin-top: 20px;">
+                <div class="p-2" style="width: 280px;">
+                    <div class="darken border-card" onclick="exampleImage('example01', 'wow . what a great view !')">
+                        <img src="./global/example01.png" style="display:inline-block; width: 280px; height: 20rem;">
+						<div class="margin_span"></div>
+						<div class="text_border">wow . what a great view !</div>
+                    </div>
+                </div>
+                <div class="p-2" style="width: 280px;">
+                    <div class="darken border-card" onclick="exampleImage('example02', 'it was nice out yesterday')">
+                        <img src="./global/example02.png" style="display:inline-block; width: 280px; height: 20rem;">
+						<div class="margin_span"></div>
+						<div class="text_border">it was nice out yesterday</div>
+					</div>
+                </div>
+                <div class="p-2" style="width: 280px;">
+                    <div class="darken border-card" onclick="exampleImage('example03', 'This spring break thing is really hard')">
+                        <img src="./global/example03.png" style="display:inline-block; width: 280px; height: 20rem;">
+						<div class="margin_span"></div>
+						<div class="text_border">This spring break thing is really hard</div>
+					</div>
+                </div>
+                <div class="p-2" style="width: 300px;">
+                    <div class="darken border-card" onclick="exampleImage('example04', 'Trump supporters are threatening to leave the United States if Trump is indicted. What do you say to them? \"Ketchup\"')">
+                        <img src="./global/example04.png" style="display:inline-block; width: 300px; height: 20rem;">
+						<div class="margin_span"></div>
+						<div class="text_border">Trump supporters are threatening to leave the United States if Trump is indicted. What do you say to them? "Ketchup"</div>
+					</div>
+                </div>
+            </div>
+        </div>
+<!-- 
+        <div class="container" style="margin-top: 24px; margin-left: 8px; margin-bottom: 24px;">
+
+            <div>
+                <input type="file" id="btn_file" style="display:none" onchange="imgChange(this)" accept="image/png,image/gif,image/jpeg">
+                <button type="button" class="btn btn-dark btn-lg" onclick="F_Open_dialog()" style="font-size:22px;">选择图片</button>
+            </div>
+
+        </div> -->
+
+        <hr/>
+
+       <!-- <h1 style="margin-top: 24px; margin-bottom: 24px;">预测结果：反讽</h1> -->
+
+        <div id="overlay">
+            <div class="w-100 d-flex justify-content-center align-items-center">
+                <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" style="min-width: 360px; margin-bottom: 36px;">
+                    <img id="input_image" class="shadow" style="height: 360px;" src="./global/example04.png" >
+                </div>
+				<div class="col" style="min-width: 360px; margin-bottom: 36px;">
+					<!-- <input type="text" class="border-card text_border" style="width: 560px;height:360px;" placeholder="Trump supporters are threatening to leave the United States if Trump is indicted. What do you say to them? Ketchup? leave the United States if Trump is indicted. What do you say to them? Ketchup?"> -->
+					<textarea id="input_text" class="font-input border-card" style="width: 560px;height:360px;">Trump supporters are threatening to leave the United States if Trump is indicted. What do you say to them? "Ketchup"
+					</textarea>
+				</div>
+			
+				<hr>
+			
+				<div class="col" style="min-width: 360px; margin-bottom: 36px;">
+					<input type="file" id="btn_file" style="display:none" onchange="imgChange(this)" accept="image/png,image/gif,image/jpeg">
+					<button type="button" class="btn btn-dark btn-lg" onclick="F_Open_dialog()" style="margin-left: 16px; font-size:22px;">上传图文对</button>
+				</div>
+				
+				<div class="col" style="margin-left: 20px; min-width: 360px; margin-bottom: 36px;">
+					<div id="pos_val_bar" style="background:#DDDDDD; width:96.8%;">
+						<p id="pos_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128512; Sarcastic: 96.8%</p>
+					</div>
+					<div id="neg_val_bar" style="background:#DDDDDD; width:2.2%;">
+							<p id="neg_val" class="pl-5" style="font-size:28px;white-space:nowrap;">&#128533; Non-Sarcastic: 3.2%</p>
+					</div>
+					<hr/>
+				</div>
+			</div>
+
+		</div>
+
+    </div>
+
+    <div class="container">
+        <div class="container h-100">
+            <h1 style="color:#000000; padding-top:3rem;margin-left:-3rem;">互联网隐式情感周报</h1>
+        </div>
+    </div>
+
+	<div class="container" style="margin-top: 10px;">
+		<div class="row">
+			<div class="col" style="margin-bottom: 36px;">
+				<div class="weak_text">2022年9月 (英文)</div>
+				<hr width=50% style="margin-top: 0px;"> 
+				<div class="d-flex flex-wrap" style="margin-top: -10px; margin-left: 10px;">
+					<a href="jiaoben2304/index.html">
+						<div class="p-2" style="width: 140px;">
+							<img src="jiaoben2304/weak_report/9_1/9110.JPG" style="display:inline-block; width: 140px; height: 10rem;">
+							<div class="weaks"> 第一期 </div>
+							<div class="margin_span"></div>   
+						</div>
+					</a>
+					<a href="jiaoben2304/index92.html">
+						<div class="p-2" style="width: 140px;">
+								<img src="jiaoben2304/weak_report/9_2/1.jpg" style="display:inline-block; width: 140px; height: 10rem;">
+								<div class="weaks"> 第二期 </div>
+								<div class="margin_span"></div>
+						</div>
+					</a>
+					<a href="jiaoben2304/index93.html">
+						<div class="p-2" style="width: 140px;">
+								<img src="jiaoben2304/weak_report/9_3/1.JPG" style="display:inline-block; width: 140px; height: 10rem;">
+								<div class="weaks"> 第三期 </div>
+								<div class="margin_span"></div>
+						</div>
+					</a>
+					<a href="jiaoben2304/index94.html">
+						<div class="p-2" style="width: 140px;">
+								<img src="jiaoben2304/weak_report/9_4/1.jpg" style="display:inline-block; width: 140px; height: 10rem;">
+								<div class="weaks"> 第四期 </div>
+								<div class="margin_span"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col" style="margin-bottom: 36px;">
+				<div class="weak_text">2022年10月 (英文)</div>
+				<hr width=50% style="margin-top: 0px;"> 
+				<div class="d-flex flex-wrap" style="margin-top: -10px; margin-left: 10px;">
+					<a href="jiaoben2304/index101.html">
+						<div class="p-2" style="width: 140px;">
+							<img src="jiaoben2304/weak_report/10_1/1.JPG" style="display:inline-block; width: 140px; height: 10rem;">
+							<div class="weaks"> 第一期 </div>
+							<div class="margin_span"></div>   
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 10px;">
+		<div class="row">
+			<div class="col" style="margin-bottom: 36px;">
+				<div class="weak_text">2022年9月 (中文)</div>
+				<hr width=50% style="margin-top: 0px;"> 
+				<div class="d-flex flex-wrap" style="margin-top: -10px; margin-left: 10px;">
+					<a href="jiaoben2304/index_china.html">
+						<div class="p-2" style="width: 140px;">
+							<img src="jiaoben2304/chinese report/9_1/2.JPG" style="display:inline-block; width: 140px; height: 10rem;">
+							<div class="weaks"> 第一期 </div>
+							<div class="margin_span"></div>   
+						</div>
+					</a>
+					<a href="jiaoben2304/index_china9_2.html">
+						<div class="p-2" style="width: 140px;">
+								<img src="jiaoben2304/chinese report/9_2/1.jpg" style="display:inline-block; width: 140px; height: 10rem;">
+								<div class="weaks"> 第二期 </div>
+								<div class="margin_span"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<footer class="pt-4 my-md-5 pt-md-5 border-top">
+		<div class="container">
+			<div class="row">
+				<div class="col" style="margin-bottom: 36px;">
+					<h3  style="margin-bottom: 15px;">联系我们：</h3>
+					<ul class="list-unstyled">
+						<li style="font-size: 20px;margin-bottom: 15px;">贾国力 exped1230@gmail.com</li>
+						<li style="font-size: 20px;margin-bottom: 15px;">文长崧 downdric@163.com</li>
+						<li style="font-size: 20px;margin-bottom: 15px;">张知诚 gloryzzc6@sina.com</li>
+					</ul>
+				</div>
+				<div class="col" style="margin-bottom: 36px;">
+					<h3  style="margin-bottom: 25px;">微信交流群：</h3>
+					<img class="shadow" style="width: 150px;" src="./global/code.png" />
+				</div>
+			</div>
+			<p><class="d-block mb-3 text-muted">&copy; All rights reserved</p>
+		</div>
+	</footer>
+
+
+</main>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+
+<script type="text/javascript">
+    function F_Open_dialog()
+    {
+        document.getElementById("btn_file").click();
+    }
+
+    function round(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    function sendFromData(fd, img_file) {
+        $.ajax({
+            type:'POST',
+            url: "https://exped1230.cpolar.top/sarcasm_upload",
+            data: fd,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(res){
+                document.getElementById("overlay").style.display = "none";
+                console.log(res);
+				var fr = new FileReader();
+				fr.readAsDataURL(img_file);
+				fr.onloadend = function(){
+					document.getElementById("input_image").src = fr.result;
+				}
+                document.getElementById("input_image").src = "./global/" + name + ".png";
+                sarcasm_res = res["sarcasm"];
+                let non_sarcasm = round(parseFloat(1-sarcasm_res)*100, 1);
+                let sarcasm = round(parseFloat(sarcasm_res)*100, 1);
+                let pos_val = document.getElementById("pos_val");
+                let neg_val = document.getElementById("neg_val");
+                pos_val.innerHTML = "&#128512; Sarcastic: "+sarcasm+"%";
+                neg_val.innerHTML = "&#128533; Non-Sarcastic: "+non_sarcasm+"%";
+                pos_val_bar.style["width"] = sarcasm+"%";
+                neg_val_bar.style["width"] = non_sarcasm+"%";
+            },
+            error: function(data){
+                document.getElementById("overlay").style.display = "none";
+                alert("Sorry, something went wrong.");
+            }
+        });
+    }
+
+    function imgChange(self) {
+        if (self.files.length < 1) {
+            return;
+        }
+        document.getElementById("overlay").style.display = "flex";
+        var img_file = self.files[0];
+        var formData = new FormData();
+		var text_content = document.getElementById("input_text").value
+        formData.append("img", img_file);
+		formData.append("text", text_content);
+        sendFromData(formData, img_file);
+    }
+
+
+    function exampleImage(name, text) {
+        document.getElementById("overlay").style.display = "flex";
+        var formData = new FormData();
+        formData.append('img_path', "./sarcasm/examples/"+name+".png")
+		formData.append('text', text)
+		$.ajax({
+		    type:'POST',
+		    url: "https://exped1230.cpolar.top/sarcasm_example",
+		    data: formData,
+		    cache:false,
+		    contentType: false,
+		    processData: false,
+		    success:function(res){
+		        document.getElementById("overlay").style.display = "none";
+		        console.log(res);
+		        document.getElementById("input_image").src = "./global/" + name + ".png";
+				document.getElementById("input_text").value = text;
+		        sarcasm_res = res["sarcasm"];
+				let non_sarcasm = round(parseFloat(1-sarcasm_res)*100, 1);
+				let sarcasm = round(parseFloat(sarcasm_res)*100, 1);
+				let pos_val = document.getElementById("pos_val");
+				let neg_val = document.getElementById("neg_val");
+				pos_val.innerHTML = "&#128512; Sarcastic: "+sarcasm+"%";
+				neg_val.innerHTML = "&#128533; Non-Sarcastic: "+non_sarcasm+"%";
+				pos_val_bar.style["width"] = sarcasm+"%";
+				neg_val_bar.style["width"] = non_sarcasm+"%";
+		    },
+		    error: function(data){
+		        document.getElementById("overlay").style.display = "none";
+		        alert("Sorry, something went wrong.");
+		    }
+		});
+		
+    }
+
+</script>
+
+<!-- <script src="./chart/dist/Chart.bundle.js"></script>
+
+<script>
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Amusement', 'Contentment', 'Awe', 'Excitement', 'Fear', 'Sadness', 'Disgust', 'Anger'],
+            datasets: [{
+                label: 'Emotion confidence',
+                data: [1,2,3,4,5,6,7,8],
+                backgroundColor: [
+                    'rgba(33, 99, 188, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(32, 64, 128, 1)',
+                    'rgba(255, 64, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                ],
+                borderColor: [
+                    'rgba(33, 99, 188, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(32, 64, 128, 1)',
+                    'rgba(255, 64, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                ],
+                borderWidth: 1
+            }],
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+			"animation": {
+			    "duration": 0,
+			    "onComplete": function() {
+					var chartInstance = this.chart,
+					ctx = chartInstance.ctx;
+			
+					ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+					ctx.textAlign = 'center';
+					ctx.textBaseline = 'bottom';
+			
+					this.data.datasets.forEach(function(dataset, i) {
+						var meta = chartInstance.controller.getDatasetMeta(i);
+						meta.data.forEach(function(bar, index) {
+							var data = dataset.data[index];
+							ctx.fillText(data, bar._model.x, bar._model.y - 5);
+						});
+					});
+			    }
+			}
+        }
+		/*onAnimationComplete: function () {
+		    var ctx = this.chart.ctx;
+		    ctx.font = this.scale.font;_model
+		    ctx.fillStyle = this.scale.textColor
+		    ctx.textAlign = "center";
+		    ctx.textBaseline = "bottom";
+		    this.datasets.forEach(function (dataset) {
+		        dataset.bars.forEach(function (bar) {
+		            ctx.fillText(bar.value, bar.x, bar.y - 5);
+		        });
+		    })
+		}*/
+    });
+	
+    
+</script> -->
+
+
+
+</body>
+</html>
