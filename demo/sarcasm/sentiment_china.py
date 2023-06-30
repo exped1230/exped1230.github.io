@@ -21,11 +21,15 @@ ind = [0,0.6]
 # plt.xticks(ind, ('Image', 'Text'),fontsize=70,rotation=90)
 # plt.yticks([0.35,0.82], ("Neg","Pos"),fontsize=70,rotation=90)
 plt.xticks(ind, ('图像', '文本'),fontsize=70,rotation=90)
-plt.yticks([0.4,0.85], ("消极","积极"),fontsize=70,rotation=90)
+plt.yticks([0.4,0.85], ("积极","消极"),fontsize=70,rotation=90)
+
+path = r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\chinese report\5\5_3\1_senti.png"
 #          图  文
-Bottom = (0.399,0.6)
-Center = (0.600,0.4)
-path = r"C:\Users\downd\Desktop\sarcasm624\jiaoben2304\chinese report\9_2\10_senti.png"
+y=0.65
+x=0.45
+
+Bottom = (x,y)
+Center = (1-x,1-y)
 
 d = []
 for i in range(0, len(Bottom)):
@@ -33,8 +37,8 @@ for i in range(0, len(Bottom)):
     d.append(sum)
 
 width = 0.35  # 设置条形图一个长条的宽度
-p1 = plt.bar(ind, Bottom, width, color='cornflowerblue') 
-p2 = plt.bar(ind, Center, width, bottom=Bottom,color='orange')  
+p1 = plt.bar(ind, Bottom, width, color='orange') 
+p2 = plt.bar(ind, Center, width, bottom=Bottom,color='cornflowerblue')  
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
