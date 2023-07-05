@@ -25,7 +25,7 @@ plt.yticks([0.35,0.82], ("Neg","Pos"),fontsize=70,rotation=90)
 #          图  文
 Bottom = (0.847,0.7)
 Center = (0.153,0.3)
-path = r"C:\Users\downd\Desktop\sarcasm624\jiaoben2304\weak_report\9_1\1_senti.png"
+path = r"C:\Users\downd\Desktop\sarcasm629\jiaoben2304\weak_report\9_1\1_senti.png"
 
 d = []
 for i in range(0, len(Bottom)):

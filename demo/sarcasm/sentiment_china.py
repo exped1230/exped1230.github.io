@@ -23,10 +23,10 @@ ind = [0,0.6]
 plt.xticks(ind, ('图像', '文本'),fontsize=70,rotation=90)
 plt.yticks([0.4,0.85], ("积极","消极"),fontsize=70,rotation=90)
 
-path = r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\chinese report\5\5_3\1_senti.png"
+path = r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\chinese report\9\9_2\8_senti.png"
 #          图  文
-y=0.65
-x=0.45
+y=0.32
+x=0.63
 
 Bottom = (x,y)
 Center = (1-x,1-y)
