@@ -1,4 +1,4 @@
-res_path=r"C:\Users\92056\Desktop\infer_imgs\9\reses.txt"
+res_path=r"C:\Users\92056\Desktop\infer_imgs\11\reses.txt"
 data=[]
 for line in  open(res_path,"r"):
     if line!="\n":
@@ -7,8 +7,8 @@ for line in  open(res_path,"r"):
 idx=0
 num=0
 month='1'
-file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\91.html","r", encoding="utf-8")
-file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\91_new.html","w", encoding="utf-8")
+file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\111.html","r", encoding="utf-8")
+file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\111_new.html","w", encoding="utf-8")
 for line in file:
     # if "senti.png" in line:
     #     num=num+1
@@ -32,8 +32,8 @@ for line in file:
 
 
 num=0
-file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\92.html","r", encoding="utf-8")
-file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\92_new.html","w", encoding="utf-8")
+file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\112.html","r", encoding="utf-8")
+file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\112_new.html","w", encoding="utf-8")
 for line in file:
     # if "senti.png" in line:
     #     num=num+1
@@ -56,8 +56,8 @@ for line in file:
     file2.write(line)
 
 num=0
-file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\93.html","r", encoding="utf-8")
-file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\93_new.html","w", encoding="utf-8")
+file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\113.html","r", encoding="utf-8")
+file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\113_new.html","w", encoding="utf-8")
 for line in file:
     # if "senti.png" in line:
     #     num=num+1
@@ -81,8 +81,8 @@ for line in file:
 
 
 num=0
-file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\94.html","r", encoding="utf-8")
-file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\94_new.html","w", encoding="utf-8")
+file=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\114.html","r", encoding="utf-8")
+file2=open(r"C:\Users\92056\Desktop\sarcasm629\jiaoben2304\114_new.html","w", encoding="utf-8")
 for line in file:
     # if "senti.png" in line:
     #     num=num+1
